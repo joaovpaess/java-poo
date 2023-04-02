@@ -1,0 +1,88 @@
+POO
+
+Métodos Especiais
+
+e = nova Estante
+t = e.totDoc
+
+Métodos Acessores (Getters):
+    São Métodos que dão acesso a alguma coisa
+
+e = nova Estante
+t = e.getTotDoc()
+
+Métodos acessores(getters) conseguem acessar determinado atributo mantendo a sgeurança de acesso a ele
+
+e = nova Estante
+e.totDoc = e.totDoc + 1 
+
+Métodos Modificadores (Setters):
+
+São métodos que modificam coisas dentro do objeto, garantindo a segurança do atributo, não dando acesso a modificar diretamente o atributo
+
+e = nova Estante
+e.setTotDoc(doc)
+
+-------------------------
+|       Caneta          |
+|-----------------------|
+| + modelo              |
+| - ponta               |
+|-----------------------|
+|  + getModelo()        |
+|  + setModelo(m)       |
+|  + getPonta()         |
+|  +setPonta(p)         |
+-------------------------
+
+Classe Caneta
+    publico modelo: Caractere
+    privado ponta: Real
+    publico Metodo getModelo()
+        retorne modelo
+    FimMetodo
+    publico Metodo setModelo
+        (m: Caractere)
+        modelo = m
+    FimMetodo
+    publico Metodo getPonta()
+        retorne ponta
+    FimMetodo
+    publico Metodo setPonta
+        (p: Real)
+        ponta = p
+    FimMetodo
+    FimClasse
+
+    c1 = nova Canetac1
+    c1.setModelo("BIC Cristal")
+    c1.setPonta(0,5)
+    Escreva (c1.getModelo())
+    Escreva (c1.getPonta())
+
+Método Construtor (Construct)
+
+Classe Caneta
+
+    Metodo construtor()
+        tampar()
+        cor = "Azul"
+    FimMetodo
+
+FimClasse
+c1 = nova Caneta
+
+Assim que colocar esse comando, vai ser criada uma caneta azul e ela vai estar tampada porque o método construtor indicou isso
+
+Classe Caneta
+
+    Metodo construtor(m: Caractere, c: Caractere, p: Real)
+        setModelo(m)
+        setCor(c)
+        setPonta(p)
+        tampar()
+    FimMetodo
+
+FimClasse
+c1 = nova Caneta
+     ("BIC", "Azul", 0.5)

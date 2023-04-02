@@ -1,0 +1,75 @@
+Visibilidade:
+
+Linguagem de Modelagem Unificada : UML
+
+Diagrama de Classes:
+
+-------------------------
+|       Caneta          |
+|-----------------------|
+| modelo                |
+| cor                   |
+| ponta                 |
+| carga                 |
+| tampada               |
+|-----------------------|
+|  escrever()           |
+|  rabiscar()           |
+|  pintar()             |
+|  tampar()             |
+|  destampar()          |
+-------------------------
+
+Modificadores de Visibilidade:
+
+A visibilidade indica o nível de acesso aos componentes internos de uma classe.
+
+"+" visibilidade púlica - a classe atual e todas as outras classes podem ter acesso.
+"-" visibilidade privada - somente a classe atual pode ter acesso
+"#" visibilidade protegida - a classe atual e todas as suas sub-classes podem ter acesso
+
+Exemplo: Telefone:
+
+- Telefone púlico: Orelhão (todos podem usar)
+- Telefone privado: celular (só eu posso usar)
+- Telefone protegido: telefone residencial (só minha mãe e os filhos dela podem usar)
+
+-------------------------
+|       Caneta          |
+|-----------------------|
+| + modelo              |
+| + cor                 |
+| - ponta               |
+| # carga               |
+| # tampada             |
+|-----------------------|
+|  + escrever()         |
+|  + rabiscar()         |
+|  + pintar()           |
+|  - tampar()           |
+|  - destampar()        |
+-------------------------
+
+Classe Caneta
+   publico modelo: Caractere
+   publico cor: Caractere
+   privado ponta: Real
+   protegido carga: Inteiro
+   protegido tampada: Logico
+   publico Metodo escrever()
+
+    FimMetodo
+   publico Metodo rabiscar()
+
+    FimMetodo
+
+FimClasse
+
+c1 = nova Caneta
+c1.modelo = "BIC cristal"
+c1.cor = "Azul"
+c1.ponta = 0.5 *não é possível pois o atributo foi definido como privado
+c1.carga = 80 *não é possível pois não faz parte da classe nem de nenhuma sub-classe
+c1.tampada = falso *não é possível pois não faz parte da classe nem de nenhuma sub-classe
+c1.escrever()
+c1.rabiscar *não é possível pois o método foi definido como privado

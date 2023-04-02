@@ -1,0 +1,57 @@
+POO
+
+Objeto: Coisa material ou abstrata que pode ser percebida pelos sentidos e decrita por meio das suas características, comportamentos e estado atual.
+
+
+Classe: Têm que responder às seguintes perguntas
+
+- Que coisas eu tenho
+- Que coisas eu faço
+- Como eu estou agora
+
+Exemplo: Caneta
+
+- Que coisas eu tenho: Modelo, Cor, Ponta, Carga, Tampada
+- Que coisas eu faço: Escrever, Rabiscar, Pintar, Tampar, Destampar
+- Como eu estou agora: Destampada, com metade da carga
+
+
+- Que coisas eu tenho: ATRIBUTOS
+- Que coisas eu faço: MÉTODOS
+- Como eu estou agora: ESTADO
+
+
+*Para criar um objeto, primeiro tem que criar a classe
+
+Exemplo: Caneta
+
+	Classe Caneta
+		modelo: caractere
+		cor: caractere
+		ponta: real
+		carga: inteiro
+		tampada: lógico
+		Metodo rabiscar()
+			Se (tampada) então 
+				Escreva("ERRO")
+			Senao
+				Escreva("Rabisco")
+		
+Instanciar: Quando é gerado um objeto a partir de uma classe
+
+	c1 = nova Caneta
+	c1.cor = "Azul"
+	c1.ponta = 0,5
+	c1.tampada = falso
+	c1.rabiscar()
+
+	c2 = nova Caneta
+	c2.cor = "Vermelha"
+	c2.ponta = 1.0
+	c2.tampada = falso
+	c2.tampar()
+
+
+CLASSE: Define os atributos e  métodos comuns que serão compartilhados por um objeto.
+
+OBJETO: É a instância de uma classe
